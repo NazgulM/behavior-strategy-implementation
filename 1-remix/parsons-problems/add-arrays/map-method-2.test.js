@@ -1,9 +1,9 @@
-/* https://www.codewars.com/kata/reviews/58677f75395d91ce1d000576/groups/60c649d3408198000190aec2 */
+/* https://www.codewars.com/kata/reviews/58677f75395d91ce1d000576/groups/607972557b9a3d0001e17286 */
 
-function addArrays(a1, a2) {
-  if (a1.length !== a2.length) throw new Error();
-  return a1.map((v, i) => v + a2[i]);
-}
+const addArrays = (arr1, arr2) => {
+  if (arr1.length !== arr2.length) throw 'Error';
+  return arr1.map((addArrays, i) => arr1[i] + arr2[i]);
+};
 
 for (const solution of [addArrays]) 
 {
@@ -22,7 +22,7 @@ for (const solution of [addArrays])
 
   describe('It should work with strings', () => {
     it('Add array 1 string and array 2 string', () => {
-      expect(addArrays(['hi','ha'],['hi','ha'])).toEqual(['hihi', 'haha'])
+      expect(addArrays(['hi','ha'],['hi', 'ha'])).toEqual(['hihi', 'haha'])
     });
   });
 
