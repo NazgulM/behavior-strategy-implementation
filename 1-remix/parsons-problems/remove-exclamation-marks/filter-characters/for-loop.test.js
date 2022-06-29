@@ -3,10 +3,10 @@
 /* this exercise has 3 distractors */
 
 function removeExclamationMarks(s) {
-  var newString = '';
+  let newString = "";
   for (let i = 0; i < s.length; i++) {
-    if (s[i] != '!') {
-      newString += s[i];
+    if (s[i].includes("!")) {
+      newString = s[i].replace('!', '');
     }
   }
   return newString;
@@ -15,3 +15,10 @@ function removeExclamationMarks(s) {
 newString = s[i]; // distractor
 return s; // distractor
 if (s[i] == '!') { // distractor
+
+  
+describe("Tests", () => {
+  test("test if the string has ! marks", () => {
+    expect("Hello World!").toEqual("Hello World");
+  });
+});
