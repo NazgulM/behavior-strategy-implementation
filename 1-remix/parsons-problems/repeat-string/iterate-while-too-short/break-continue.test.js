@@ -21,12 +21,25 @@ const repeatString = (text = '', repetitions = 1) => {
     if (repeatedText.length === finalLength) {
       break;
     }
-    repeatedText = repeatedText + text;
+    repeatedText += text;
   }
   return repeatedText;
 };
 
-continue; // distractor
-if (repeatedText.length = finalLength) { // distractor
-while (false) { // distractor
-} // distractor
+// continue; // distractor
+// if (repeatedText.length = finalLength) { // distractor
+// while (false) { // distractor
+// } // distractor
+
+describe("Tests", () => {
+  it("test if the string can ", () => {
+    expect(repeatString('naza', 1)).toEqual("naza");
+  });
+});
+
+
+describe("Tests", () => {
+  it("test if the string can ", () => {
+    expect(repeatString('naza', 2)).toEqual("nazanaza");
+  });
+});
