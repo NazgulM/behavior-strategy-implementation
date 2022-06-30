@@ -11,5 +11,11 @@ function removeExclamationMarks(s) {
   return s;
 }
 
-s.slice(0, index).concat(s.slice(index + 1, s.length)); // distractor
-let s = s.slice(0, index).concat(s.slice(index + 1, s.length)); // distractor
+// s.slice(0, index).concat(s.slice(index + 1, s.length)); // distractor
+// let s = s.slice(0, index).concat(s.slice(index + 1, s.length)); // distractor
+
+describe("Tests", () => {
+  it("test if the string has ! marks", () => {
+    expect(removeExclamationMarks("Hello World!")).toEqual("Hello World");
+  });
+});
