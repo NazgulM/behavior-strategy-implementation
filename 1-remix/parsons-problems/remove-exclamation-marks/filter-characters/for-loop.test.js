@@ -3,22 +3,22 @@
 /* this exercise has 3 distractors */
 
 function removeExclamationMarks(s) {
-  let newString = "";
-  for (let i = 0; i < s.length; i++) {
-    if (s[i].includes("!")) {
-      newString = s[i].replace('!', '');
-    }
+  let newString = s.split("");
+  for (let i = 0; i < newString.length; i++) {
+    newString[i] = newString[i].replace('!', '');
   }
-  return newString;
+  return newString.join('');
 }
 
-newString = s[i]; // distractor
-return s; // distractor
-if (s[i] == '!') { // distractor
-
-  
 describe("Tests", () => {
-  test("test if the string has ! marks", () => {
-    expect("Hello World!").toEqual("Hello World");
+  it("test if the string has ! marks", () => {
+    expect(removeExclamationMarks("Hello World!")).toEqual("Hello World");
   });
 });
+
+describe("Tests", () => {
+  it("test if the string has ! marks", () => {
+    expect(removeExclamationMarks("Naza! how! are you?!")).toEqual("Naza how are you?");
+  });
+});
+
