@@ -17,12 +17,18 @@
 
 const repeatString = (text = '', repetitions = 1) => {
   let repeatedText = '';
-  for (let count = 0; count < repetitions; count++) {
+  for (let count = repetitions; count > 0; count--) {
     repeatedText += text;
   }
   return repeatedText;
 };
 
-for (let count = 0; count <= repetitions; count++) { // distractor
-for (let count = 0; count !>= repetitions; count++) { // distractor
-for (const count = 0; count < repetitions; count++) { // distractor
+// for (let count = repetitions; count > 0; count++ { // distractor
+// for (let count = repetitions; count === 0; count--) { // distractor
+// for (let count = repetitions; count >= 0; count-) { // distractor
+
+describe("Tests", () => {
+  it("test if the string can ", () => {
+    expect(repeatString('naza', 3)).toEqual("nazanazanaza");
+  });
+});

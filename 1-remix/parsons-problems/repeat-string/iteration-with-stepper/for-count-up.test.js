@@ -1,4 +1,4 @@
-/* 4 extra lines */
+/* 3 extra lines */
 
 /* parsons-collapse: iterating over the number of repetitions
 
@@ -17,16 +17,19 @@
 
 const repeatString = (text = '', repetitions = 1) => {
   let repeatedText = '';
-  let count = 0;
-  while (count < repetitions) {
-    repeatedText = repeatedText + text;
-    count++;
+  for (let count = 0; count < repetitions; count++) {
+    repeatedText += text;
   }
   return repeatedText;
 };
 
-count+; // distractor
-const count = 0; // distractor
-const repeatedText = ''; // distractor
+// for (let count = 0; count <= repetitions; count++) { // distractor
+// for (let count = 0; count !>= repetitions; count++) { // distractor
+// for (const count = 0; count < repetitions; count++) { // distractor
 
-const repeatString = (text: '', repetitions: 1) => { // distractor
+
+describe("Tests", () => {
+  it("test if the string can ", () => {
+    expect(repeatString('naza', 3)).toEqual("nazanazanaza");
+  });
+});

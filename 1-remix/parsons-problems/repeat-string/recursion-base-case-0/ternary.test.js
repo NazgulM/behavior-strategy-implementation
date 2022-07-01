@@ -18,11 +18,31 @@
 */
 
 // prettier-ignore
+
 const repeatString = (text = '', repetitions = 1) =>
-  repetitions === 0
+(repetitions === 0
     ? ''
-    : text + repeatString(text, nextRepetitions - 1);
+    : text + repeatString(text, repetitions - 1));
 
 
-const repeatString = (text = '', repetitions = 1) => { // distractor
-repetitions = 0 // distractor
+// const repeatString = (text = '', repetitions = 1) => { // distractor
+// repetitions = 0 // distractor
+
+
+describe("Tests", () => {
+  it("test if the string can repeat ", () => {
+    expect(repeatString('', 0)).toEqual('');
+  });
+});
+
+describe("Tests", () => {
+  it("test if the string can repeat n times", () => {
+    expect(repeatString('aruuke', 1)).toEqual('aruuke');
+  });
+});
+
+describe("Tests", () => {
+  it("test if the string can repeat n times", () => {
+    expect(repeatString('aruuke', 2)).toEqual('aruukearuuke');
+  });
+});

@@ -18,10 +18,27 @@
 */
 
 // prettier-ignore
-const repeatString = (text = '', repetitions = 1, repeated = '') =>
-  repetitions === 0
+const repeatString = (text = '', repetitions = 1, repeated = '') => repetitions === 0
     ? repeated
     : repeatString(text, repetitions - 1, repeated + text);
 
-? '' // distractor
-: repeatString(text, repetitions - 1); // distractor
+// ? '' // distractor
+// : repeatString(text, repetitions - 1); // distractor
+
+describe("Tests", () => {
+  it("test if the string can repeat ", () => {
+    expect(repeatString('', 0)).toEqual('');
+  });
+});
+
+describe("Tests", () => {
+  it("test if the string can repeat n times", () => {
+    expect(repeatString('aruuke', 1)).toEqual('aruuke');
+  });
+});
+
+describe("Tests", () => {
+  it("test if the string can repeat n times", () => {
+    expect(repeatString('aruuke', 2)).toEqual('aruukearuuke');
+  });
+});

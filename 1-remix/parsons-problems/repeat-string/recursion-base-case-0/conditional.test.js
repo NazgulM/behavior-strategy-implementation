@@ -27,6 +27,23 @@ const repeatString = (text = '', repetitions = 1) => {
   }
 };
 
-return oneRepetitionShort + text; // distractor
-if (repetitions !== 0) { // distractor
+// return oneRepetitionShort + text; // distractor
+// if (repetitions !== 0) { // distractor
 
+describe("Tests", () => {
+  it("test if the string can repeat ", () => {
+    expect(repeatString('', 0)).toEqual('');
+  });
+});
+
+describe("Tests", () => {
+  it("test if the string can repeat n times", () => {
+    expect(repeatString('aruuke', 1)).toEqual('aruuke');
+  });
+});
+
+describe("Tests", () => {
+  it("test if the string can repeat n times", () => {
+    expect(repeatString('aruuke', 2)).toEqual('aruukearuuke');
+  });
+});
