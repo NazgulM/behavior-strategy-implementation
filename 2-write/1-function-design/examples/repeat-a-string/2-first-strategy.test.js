@@ -33,12 +33,14 @@
 
 */
 
-const forLoopTry1 = (text = '', repetitions = 1) => {};
+const forLoopTry1 = (text = '', repetitions = 1) => {
+  return Array(repetitions).fill(text).join('');
+};
 
 // =============== a for-of loop to control which solution(s) are tested ===============
 
 for (const solution of [
-  // secretSolution, //     <--- comment out the secretSolution
+   secretSolution, //     <--- comment out the secretSolution
   forLoopTry1, //          <--- write your function's name here. and you're ready to test!
 ]) {
   // =============== test cases for this challenge ===============

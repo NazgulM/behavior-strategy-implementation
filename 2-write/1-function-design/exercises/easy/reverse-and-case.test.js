@@ -15,7 +15,7 @@
 
 for (const solution of [secretSolution]) {
   describe(
-    solution.name + ': reverses a string then sets to lower or upper case',
+    `${solution.name}: reverses a string then sets to lower or upper case`,
     () => {
       describe("the function's default parameters", () => {
         it('second parameter defaults to true', () => {
@@ -28,19 +28,43 @@ for (const solution of [secretSolution]) {
       // write the tests indicated by the comments
       describe('when set to lower case', () => {
         // when the text is an empty string
-        it(_, () => {
-          expect(solution(_, _)).toEqual(_);
+        it('string is an empty string', () => {
+          expect(solution()).toEqual('');
         });
         // when the text is all upper case
+        it('text is all uppercase', () => {
+          expect(solution('NAZA')).toEqual('azan');
+        });
         // when the text is all lower case
+        it('text is all lowercase', () => {
+          expect(solution('aruuke')).toEqual('ekuura');
+        });
         // when the text is mixed upper and lower case
+        it('text is all mixed upper and lowercase', () => {
+          expect(solution('chiKA')).toEqual('akihc');
+        });
         // when the text contains punctuation
+        it('text is all mixed upper and lowercase', () => {
+          expect(solution('nurs!!!***')).toEqual('***!!!srun');
+        });
         // when the text contains numbers
+        it('text is all mixed upper and lowercase', () => {
+          expect(solution('bakai1605')).toEqual('5061iakab');
+        });
       });
       describe('when set to upper case', () => {
         // when the text is an empty string
+        it('string is an empty string', () => {
+          expect(solution()).toEqual('');
+        });
         // when the text is all upper case
+        it('string is all uppercase', () => {
+          expect(solution('AIDAI')).toEqual('iadia');
+        });
         // when the text is all lower case
+        it('string is all uppercase', () => {
+          expect(solution('car')).toEqual('rac');
+        });
         // when the text is mixed upper and lower case
         // when the text contains punctuation
         // when the text contains numbers

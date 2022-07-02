@@ -23,6 +23,26 @@ for (const solution of [secretSolution]) {
       expect(solution('ASDF')).toEqual('FDSA');
     });
     // write at least 5 more tests ...
+
+    it('a string with exclamation mark and letters', () => {
+      expect(solution('naza!')).toEqual('!azan');
+    });
+
+    it('a string with capital and small letters', () => {
+      expect(solution('AruUke')).toEqual('ekUurA');
+    });
+
+    it('a string with numbers', () => {
+      expect(solution('12345')).toEqual('54321');
+    });
+
+    it('a string with numbers', () => {
+      expect(solution('I am Nazgul')).toEqual('lugzaN ma I');
+    });
+
+    it('a string with numbers', () => {
+      expect(solution('race car')).toEqual('rac ecar');
+    });
   });
 }
 
