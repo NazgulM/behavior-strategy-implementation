@@ -16,8 +16,13 @@
 
 for (const solution of [secretSolution]) {
   describe(solution.name + ': _', () => {
-    describe('_', () => {
-      it('_', () => {});
+    describe('it should return only numbers from array', () => {
+      it('from given array of numbers and strings, return numbers', () => {
+        expect(solution(['1', '2', 'e', '.'])).toEqual([1, 2]);
+      });
+      it('from given array of numbers and strings, return numbers', () => {
+        expect(solution(['1', '2', 'e', '.'])).toEqual([1, 2]);
+      });
     });
   });
 }

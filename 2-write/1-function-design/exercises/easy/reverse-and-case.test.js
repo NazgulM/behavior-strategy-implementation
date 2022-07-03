@@ -59,15 +59,24 @@ for (const solution of [secretSolution]) {
         });
         // when the text is all upper case
         it('string is all uppercase', () => {
-          expect(solution('AIDAI')).toEqual('iadia');
+          expect(solution('AIDAI',false)).toEqual('IADIA');
         });
         // when the text is all lower case
-        it('string is all uppercase', () => {
-          expect(solution('car')).toEqual('rac');
+        it('string is all lowercase', () => {
+          expect(solution('car',false)).toEqual('RAC');
         });
         // when the text is mixed upper and lower case
+        it('string is mixed lower and upper case', () => {
+          expect(solution('ATa',false)).toEqual('ATA');
+        });
         // when the text contains punctuation
+        it('string contanins punctuaton', () => {
+          expect(solution('ATa!!!***',false)).toEqual('***!!!ATA');
+        });
         // when the text contains numbers
+        it('string contains numbers', () => {
+          expect(solution('my phone number 123',false)).toEqual('321 REBMUN ENOHP YM');
+        });
       });
     }
   );

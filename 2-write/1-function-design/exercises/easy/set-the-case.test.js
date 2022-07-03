@@ -26,10 +26,13 @@ for (const solution of [secretSolution]) {
     // write the tests indicated by the comments
     describe('when set to lower case', () => {
       // when the text is an empty string
-      it(_, () => {
-        expect(solution(_, _)).toEqual(_);
+      it('text is an empty string', () => {
+        expect(solution()).toEqual('');
       });
       // when the text is all upper case
+      it('text is an empty string', () => {
+        expect(solution('AIDAI')).toEqual('aidai');
+      });
       // when the text is all lower case
       // when the text is mixed upper and lower case
       // when the text contains punctuation
