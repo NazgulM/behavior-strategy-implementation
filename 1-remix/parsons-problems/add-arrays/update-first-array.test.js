@@ -1,23 +1,22 @@
-/* https://www.codewars.com/kata/reviews/58677f75395d91ce1d000576/groups/60c649d3408198000190aec2 */
+/* https://www.codewars.com/kata/reviews/58677f75395d91ce1d000576/groups/5d6a8a05c968e80001066720 */
 
-function addArrays(a1, a2) {
-  if (a1.length !== a2.length) throw new Error();
-  return a1.map((v, i) => v + a2[i]);
+/* this exercise has 0 distractors */
+
+function addArrays(array1, array2) {
+  var len = array1.length;
+
+  if (len === array2.length) {
+    for (var i = 0; i < len; i++) {
+      array1[i] += array2[i];
+    }
+
+    return array1;
+  }
+
+  throw new Error();
 }
 
-<<<<<<< HEAD
-describe('Add array with two correct number arrays, passed', () => {
-  it('should add up the arrays', () => {
-    expect(addArrays[0, 1], [2,3]).toEqual([2,4])
-  });
-})
 
-describe('Add array with string and number, passed', () => {
-  it('add array with one string to array2', () => {
-    expect(addArrays[0, '1'], [2, 3]).toEqual([2,'13'])
-  });
-})
-=======
 for (const solution of [addArrays]) 
 {
   describe('Adding up two arrays', () => {
@@ -40,4 +39,3 @@ for (const solution of [addArrays])
   });
 
 }
->>>>>>> 29aed949ebf6649ff43efb27bc43a0ff9ebaa897
