@@ -5,9 +5,9 @@ function addArrays(a1, a2) {
   return a1.map((v, i) => v + a2[i]);
 }
 
-describe('Add array with two correct number arrays, passed', () => {
+ describe('Add array with two correct number arrays, passed', () => {
   it('should add up the arrays', () => {
-    expect(addArrays[0, 1], [2,3]).toEqual([2,4])
+    expect(addArrays[0, 1], [2,3]).toEqual([2,4]);
   });
 })
 

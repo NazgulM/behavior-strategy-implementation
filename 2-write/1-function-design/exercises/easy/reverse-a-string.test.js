@@ -10,7 +10,11 @@
 
 // -------- your solutions --------
 
-for (const solution of [secretSolution]) {
+const toReverse = (str='') => {
+  return str.split("").reverse().join("")
+}
+
+for (const solution of [secretSolution, toReverse]) {
   // the main test suite for the function
   describe(solution.name + ': reverses a string', () => {
     it('default parameter is an empty string -> ""', () => {

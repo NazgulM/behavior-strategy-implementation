@@ -10,7 +10,16 @@
 
 // -------- your solutions --------
 
-for (const solution of [secretSolution]) {
+const mySolution  = (num=0) => {
+  let myArray =[];
+  for (let i = num; i >= 0; i--){
+    myArray.push(i);
+  }
+  return myArray;
+}
+
+
+for (const solution of [secretSolution, mySolution]) {
   // the main test suite for the function
   describe(`${solution.name}: counts down to 0`, () => {
     it('default parameter is 0 -> [0]', () => {

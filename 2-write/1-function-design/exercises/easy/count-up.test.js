@@ -11,6 +11,13 @@
 
 // -------- your solutions --------
 
+const countUp  = (max = 0) => {
+  let myArray = [];
+  for (let i  = max; i>=0; i++) {
+    myArray.push(i);
+  }
+  return myArray;
+}
 for (const solution of [secretSolution]) {
   // the main test suite for the function
   describe(solution.name + ': counts up from 0', () => {
