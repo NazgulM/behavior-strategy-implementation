@@ -10,8 +10,8 @@
 
 // -------- your solutions --------
 
-const toReverse = (str='') => {
-  return str.split("").reverse().join("")
+const toReverse = (str = '') => {
+  return str.split("").reverse().join("");
 }
 
 for (const solution of [secretSolution, toReverse]) {
