@@ -10,8 +10,15 @@
  */
 
 // -------- your solutions --------
+const mySolution  = (text) => {
+  if (text) {
+    return true
+  } else {
+    return false
+  }
+}
 
-for (const solution of [secretSolution]) {
+for (const solution of [secretSolution, mySolution]) {
   /* Execution Paths
       when testing conditionals, you need to be test all paths
   */

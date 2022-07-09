@@ -13,8 +13,18 @@
  */
 
 // -------- your solutions --------
+const mySolution = (val1, val2) => {
+  if (val1 === val2) {
+    return 'strictly equal';
+  } if (typeof val1 === typeof val2) {
+    return 'same type';
+  }
+  return 'totally different';
 
-for (const solution of [secretSolution]) {
+}
+
+
+for (const solution of [secretSolution, mySolution]) {
   describe(solution.name + ': determines how similar two values are', () => {
     describe('when values are strictly equal', () => {
       it('two identical strings -> "strictly equal"', () => {
@@ -27,7 +37,7 @@ for (const solution of [secretSolution]) {
       it('two identical booleans -> "strictly equal"', () => {
         expect(solution(true, true)).toEqual('strictly equal');
       });
-      
+
     });
     describe('when values have the same type', () => {
       it('two different strings -> "same type"', () => {

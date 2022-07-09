@@ -13,8 +13,12 @@
  */
 
 // -------- your solutions --------
+const mySolution = (a) => {
+const toNum = a.map(a => +a), d = toNum.filter(a => !Number.isNaN(a)); 
+return d 
+}
 
-for (const solution of [secretSolution]) {
+for (const solution of [secretSolution, mySolution]) {
   describe(solution.name + ': _', () => {
     describe('it should return only numbers from array', () => {
       it('from given array of numbers and strings, return numbers', () => {

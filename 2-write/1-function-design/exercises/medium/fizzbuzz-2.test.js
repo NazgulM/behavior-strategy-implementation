@@ -16,10 +16,10 @@
 // -------- your solutions --------
 
 const whileLoop = (max) => {
-  let countUp = _;
+  let countUp = 1;
   const result = [];
-  while (_) {
-    const nextEntry = countUp % 15 === 0 ? '_' : _ ? 'buzz' : _ ? 'fizz' : _;
+  while (countUp <= 15) {
+    const nextEntry = countUp % 15 === 0 ? 'fizzbuzz' : 3 ? 'buzz' : 5 ? 'fizz' : countUp;
     result.push(nextEntry);
   }
   return result;
@@ -29,8 +29,8 @@ const whileLoop = (max) => {
  */
 const oneLineforLoop = (max) => {
   const result = [];
-  for (let i = 0; i < _; )
-    result._((++i % _ ? '' : '_') + (i % _ ? '' : '_') || i);
+  for (let i = 0; i < 15;)
+    result.push((++i % 15 ? 'fizzbuzz' : 'fizz') + (i % 5 ? 'buzz' : '') || i);
   return result;
 
   // https://codeburst.io/javascript-breaking-down-the-shortest-possible-fizzbuzz-answer-94a0ad9d128a
@@ -65,8 +65,8 @@ const manySmallFunctions = (max) => {
 
 for (const solution of [
   secretSolution,
-  // whileLoop,
-  // oneLineforLoop,
+  whileLoop,
+  oneLineforLoop,
   // manySmallFunctions,
 ]) {
   describe(solution.name + ': fizzbuzz', () => {

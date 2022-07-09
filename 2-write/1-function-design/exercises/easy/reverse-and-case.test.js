@@ -13,11 +13,22 @@
 
 // -------- your solutions --------
 
+const mySolution = (text = '', lowerCase = true) => {
+  let reversed = "";
+  for (let d = text.length - 1; d >= 0; d--) {
+    reversed += text[d];
+  }
+  if (lowerCase) {
+    return reversed.toLowerCase();
+  } else if (!lowerCase) {
+    return reversed.toUpperCase();
+  }
+}
 
 
 
 
-for (const solution of [secretSolution]) {
+for (const solution of [secretSolution, mySolution]) {
   describe(
     `${solution.name}: reverses a string then sets to lower or upper case`,
     () => {

@@ -19,7 +19,7 @@ const mapFilterReduce = (arr) => {
   const castToNumber = (entry) => Number(entry);
 
   // fill in the array methods and pass in the correct logic
-  const sumOfNumberies = arr._(_)._(_)._(_, _);
+  const sumOfNumberies = arr.map(castToNumber).filter(isNotNaN).reduce(sumNumbers, 0);
 
   return sumOfNumberies;
 };
@@ -28,7 +28,7 @@ const mapFilterReduce = (arr) => {
 
 for (const solution of [
   secretSolution,
-  // mapFilterReduce,
+   mapFilterReduce,
 ]) {
   describe(solution.name + ': _', () => {
     describe('_', () => {

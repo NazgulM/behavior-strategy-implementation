@@ -1,6 +1,6 @@
 // #todo
 
-'use strict';
+"use strict";
 
 /**
  * converts two boolean values into a binary string
@@ -15,26 +15,32 @@
  */
 
 // -------- your solutions --------
+const mySolution = (c = false, a = false) => {
+  let total = "";
+   return total += c ? "1" : "0", total += a ? "1" : "0", total; 
+  };
 
-for (const solution of [secretSolution]) {
+
+
+for (const solution of [secretSolution, mySolution]) {
   // this function only 4 possible combinations of arguments
   //  it's possible test them all and have 100% confidence in the function
-  describe(solution.name + ': converts two booleans to binary', () => {
+  describe(solution.name + ": converts two booleans to binary", () => {
     it('true, true --> "11"', () => {
       const actual = solution(true, true);
-      expect(actual).toEqual('11');
+      expect(actual).toEqual("11");
     });
     it('true, false --> "10"', () => {
       const actual = solution(true, false);
-      expect(actual).toEqual('10');
+      expect(actual).toEqual("10");
     });
     it('false, true --> "01"', () => {
       const actual = solution(false, true);
-      expect(actual).toEqual('01');
+      expect(actual).toEqual("01");
     });
     it('false, false --> "00"', () => {
       const actual = solution(false, false);
-      expect(actual).toEqual('00');
+      expect(actual).toEqual("00");
     });
   });
 }
@@ -42,4 +48,4 @@ for (const solution of [secretSolution]) {
 // minified solution for testing your tests
 
 // prettier-ignore
-function secretSolution(c = false, a = false) { if ("boolean" != typeof c) { throw new TypeError("a is not boolean"); } if ("boolean" != typeof a) { throw new TypeError("b is not boolean"); } let b = ""; return b += c ? "1" : "0", b += a ? "1" : "0", b }
+function secretSolution(c = false, a = false) { if ("boolean" != typeof c) { throw new TypeError("a is not boolean"); } if ("boolean" != typeof a) { throw new TypeError("b is not boolean"); } let b = ""; return b += c ? "1" : "0", b += a ? "1" : "0", b; }
