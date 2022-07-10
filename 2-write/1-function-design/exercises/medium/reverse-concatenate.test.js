@@ -10,11 +10,25 @@
  */
 
 // -------- your solutions --------
+const mySolution = (arrayOfStrings) => {
+  const result = arrayOfStrings.reverse().join('');
+  return result;
+}
 
-for (const solution of [secretSolution]) {
+
+for (const solution of [secretSolution, mySolution]) {
   describe(solution.name + ': _', () => {
     describe('_', () => {
       it('_', () => {});
+    });
+    it('reverse strings of array', () => {
+      expect(solution(['naza', 'is'])).toEqual('isnaza');
+    });
+    it('reverse strings of array', () => {
+      expect(solution(['123', '456'])).toEqual('456123');
+    });
+    it('reverse strings of array', () => {
+      expect(solution(['nursultan', 'is', 'myson'])).toEqual('mysonisnursultan');
     });
   });
 }
